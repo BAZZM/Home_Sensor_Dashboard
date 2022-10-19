@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% set active_page = "index" %}
+
+{% block app_content %}
+    
+    <div class="content">
+        <!-- ROW 1 (INFORMATION) -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card h-100" style="max-height:250px">
+                    <div class="card-body">
+                      <h3 class="card-title">Welcome Back {{ current_user.username }} !</h3>
+                      <br>
+                      <h4 class="card-text">You have: {{ flagstotal }} flags </h4>
+                      <br>
+                      <a class="btn btn-secondary" href="{{url_for('flags')}}" role="button">Check Flags</a>  
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-deck">
+                    <div class="card h-100" style="max-height:250px">
+                      <div class="card-body">
+                        <h5 class="card-title">Something</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat maecenas volutpat blandit aliquam etiam erat velit. Sed blandit libero volutpat sed cras ornare. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Dictum fusce ut placerat orci. Cras semper auctor neque vitae tempus quam. Quisque sagittis purus sit amet. Quam pellentesque nec nam aliquam sem et tortor consequat id. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Duis ut diam quam nulla porttitor. Nulla porttitor massa id neque aliquam vestibulum morbi. Ullamcorper a lacus vestibulum sed arcu non odio. Quis vel eros donec ac. Proin fermentum leo vel orci porta non. Tristique senectus et netus et malesuada fames ac turpis. Pretium aenean pharetra magna ac placerat vestibulum. Metus dictum at tempor commodo ullamcorper a lacus vestibulum. Laoreet sit amet cursus sit amet dictum.</p>
+                      </div>
+                    </div>
+                    <div class="card" style="max-height:250px">
+                      <div class="card-body">
+                        <h5 class="card-title">Something else</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci a scelerisque purus semper eget duis at tellus. Vitae aliquet nec ullamcorper sit amet risus nullam. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Odio pellentesque diam volutpat commodo sed egestas. Phasellus faucibus scelerisque eleifend donec. Pharetra magna ac placerat vestibulum lectus. Nibh praesent tristique magna sit amet purus gravida quis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Nibh tellus molestie nunc non blandit massa enim nec dui.</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <!-- ROW 2 -->
+        <div class="row top30">
+            <div class="col-md-2">
+                <div class="card h-100" style="max-height:500px">
+                    <div class="card-body">
+                        <h5 class="card-title">Reported Temperature</h5>
+                        <a class="btn btn-secondary" href="{{url_for('reported_temp')}}" role="button">View Graph</a>  
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card h-100" style="max-height:500px">
+                    <div class="card-body">
+                        <h5 class="card-title">Reported Humidity</h5>
+                        <a class="btn btn-secondary" href="{{url_for('reported_hum')}}" role="button">View Graph</a>                 
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card h-100" style="max-height:500px">
+                    <div class="card-body">
+                        <h5 class="card-title">Air Pressure</h5>
+                        <a class="btn btn-secondary" href="{{url_for('air')}}" role="button">View Graph</a>                        
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card h-100" style="max-height:500px">
+                    <div class="card-body">
+                        <h5 class="card-title">Outside Temperature</h5>
+                        <a class="btn btn-secondary" href="{{url_for('outside_temp')}}" role="button">View Graph</a>                    
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card h-100" style="max-height:500px">
+                    <div class="card-body">
+                        <h5 class="card-title">Outside Humidity</h5>
+                        <a class="btn btn-secondary" href="{{url_for('outside_hum')}}" role="button">View Graph</a>            
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card h-100" style="max-height:500px">
+                    <div class="card-body">
+                        <h5 class="card-title">Outside Air Pressure</h5>
+                        <a class="btn btn-secondary" href="{{url_for('outside_press')}}" role="button">View Graph</a>                  
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var imgArray = [
+            "https://media.istockphoto.com/photos/red-arrow-moving-up-over-graph-paper-background-picture-id1157569047?k=6&m=1157569047&s=612x612&w=0&h=RIVbYlm1Jilhi-T9OrzWFQcRoad6djgXv9iL6GZ1JQk=",
+            "https://images.squarespace-cdn.com/content/v1/55b6a6dce4b089e11621d3ed/1585087896250-R3GZ6OFWYQRZUJRCJU3D/ke17ZwdGBToddI8pDm48kGWofyRxfSJ9uscCn11zkbYUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKct6JBMPHLafCAclEKcWHYDNY2rZovXxL9ZlIF7nd_MJE2NdXUI24p4bxl0V65eVL_/produce_monthly.png",
+            "https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/graph-3033203-1280_ver_1.jpg",
+            "https://datavizcatalogue.com/methods/images/top_images/area_graph.png",
+            "https://miro.medium.com/max/3840/1*SBEVetfUnsza2Uf_tW4XlQ.png",
+            "https://images.squarespace-cdn.com/content/v1/54905286e4b050812345644c/1617304247215-9VPMBDG0B92LC26KKGZ2/ke17ZwdGBToddI8pDm48kFKoOZ2c-eadxxQWWA14FclZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpws_1p8Ol0AKlnuw-8GhUx0jGaYoavtn-naBe1w4tTeBV0X_fWYqkKZZWFu7118VyY/Snip20210401_53.png",
+            "https://docs.microsoft.com/en-us/graph/images/microsoft-graph.png"
+            ];
+        function changeGraph1() {
+            document.getElementById("graph1").src = imgArray[Math.floor(Math.random() * imgArray.length)];
+        }
+        function changeGraph2() {
+            document.getElementById("graph2").src = imgArray[Math.floor(Math.random() * imgArray.length)];
+        }
+        function changeGraph3() {
+            document.getElementById("graph3").src = imgArray[Math.floor(Math.random() * imgArray.length)];
+        }
+        function changeGraph4() {
+            document.getElementById("graph4").src = imgArray[Math.floor(Math.random() * imgArray.length)];
+        }
+        function changeGraph5() {
+            document.getElementById("graph5").src = imgArray[Math.floor(Math.random() * imgArray.length)];
+        }
+        function changeGraph6() {
+            document.getElementById("graph6").src = imgArray[Math.floor(Math.random() * imgArray.length)];
+        }
+    </script>
+
+{% endblock %}

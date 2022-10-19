@@ -1,0 +1,7 @@
+property 1 
+living room: FD:2D:15:DE:2C:AC
+kitchen: a81758fffe0420f5
+
+property 2 
+living room: E1:57:A0:49:BF:FA
+kitchen: a81758fffe0312f9

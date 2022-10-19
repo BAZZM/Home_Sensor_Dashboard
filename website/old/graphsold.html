@@ -1,0 +1,348 @@
+{% extends 'base.html' %}
+{% set active_page = "graphs" %}
+
+{% block app_content %}
+
+    <div class="content">
+        <!-- ROW 1 -->
+        <div class="row" id="row3">
+            <div class="col-md-6">
+                <div class="card h-100" id="card1" style="max-height:250px">
+                    <div class="card-body">
+                        <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/graph-3033203-1280_ver_1.jpg" class="graphImg" id="graph1">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                            </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" onclick="changeGraph1()" href="#">Property 1</a>
+                            <a class="dropdown-item" onclick="changeGraph1()" href="#">Property 2</a>
+                            <a class="dropdown-item" onclick="changeGraph1()" href="#">Property 3</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Outside Temperature</a>
+                            <a class="dropdown-item" href="#">Outside Humidity</a>
+                            <a class="dropdown-item" href="#">Outside Airpressure</a>
+                            <a class="dropdown-item" href="#">Reported Temperature</a>
+                            <a class="dropdown-item" href="#">Reported Humidity</a>
+                            <a class="dropdown-item" href="#">Light</a>
+                            <a class="dropdown-item" href="#">Motion</a>
+                            <a class="dropdown-item" href="#">Noise</a>
+                            <a class="dropdown-item" href="#">Air Pressure</a>
+                            <a class="dropdown-item" href="#">VOC</a>
+                            <a class="dropdown-item" href="#">ECO2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100" id="card2" style="max-height:250px">
+                    <div class="card-body">
+                        <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/graph-3033203-1280_ver_1.jpg" class="graphImg" id="graph1">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                            </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" onclick="changeGraph1()" href="#">Property 1</a>
+                            <a class="dropdown-item" onclick="changeGraph1()" href="#">Property 2</a>
+                            <a class="dropdown-item" onclick="changeGraph1()" href="#">Property 3</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Outside Temperature</a>
+                            <a class="dropdown-item" href="#">Outside Humidity</a>
+                            <a class="dropdown-item" href="#">Outside Airpressure</a>
+                            <a class="dropdown-item" href="#">Reported Temperature</a>
+                            <a class="dropdown-item" href="#">Reported Humidity</a>
+                            <a class="dropdown-item" href="#">Light</a>
+                            <a class="dropdown-item" href="#">Motion</a>
+                            <a class="dropdown-item" href="#">Noise</a>
+                            <a class="dropdown-item" href="#">Air Pressure</a>
+                            <a class="dropdown-item" href="#">VOC</a>
+                            <a class="dropdown-item" href="#">ECO2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="row top30">
+            <div class="col-md-6">
+                <div class="card h-100" id="card3" style="max-height:275px">
+                    <div class="card-body">
+                        <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/graph-3033203-1280_ver_1.jpg" class="graphImg" id="graph1">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                            </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 1</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 2</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 3</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Outside Temperature</a>
+                            <a class="dropdown-item" href="#">Outside Humidity</a>
+                            <a class="dropdown-item" href="#">Outside Airpressure</a>
+                            <a class="dropdown-item" href="#">Reported Temperature</a>
+                            <a class="dropdown-item" href="#">Reported Humidity</a>
+                            <a class="dropdown-item" href="#">Light</a>
+                            <a class="dropdown-item" href="#">Motion</a>
+                            <a class="dropdown-item" href="#">Noise</a>
+                            <a class="dropdown-item" href="#">Air Pressure</a>
+                            <a class="dropdown-item" href="#">VOC</a>
+                            <a class="dropdown-item" href="#">ECO2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100" id="card4" style="max-height:275px">
+                    <div class="card-body">
+                        <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/graph-3033203-1280_ver_1.jpg" class="graphImg" id="graph1">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                            </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 1</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 2</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 3</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Outside Temperature</a>
+                            <a class="dropdown-item" href="#">Outside Humidity</a>
+                            <a class="dropdown-item" href="#">Outside Airpressure</a>
+                            <a class="dropdown-item" href="#">Reported Temperature</a>
+                            <a class="dropdown-item" href="#">Reported Humidity</a>
+                            <a class="dropdown-item" href="#">Light</a>
+                            <a class="dropdown-item" href="#">Motion</a>
+                            <a class="dropdown-item" href="#">Noise</a>
+                            <a class="dropdown-item" href="#">Air Pressure</a>
+                            <a class="dropdown-item" href="#">VOC</a>
+                            <a class="dropdown-item" href="#">ECO2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100" id="card5" style="max-height:275px">
+                    <div class="card-body">
+                        <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/graph-3033203-1280_ver_1.jpg" class="graphImg" id="graph1">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                            </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 1</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 2</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 3</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Outside Temperature</a>
+                            <a class="dropdown-item" href="#">Outside Humidity</a>
+                            <a class="dropdown-item" href="#">Outside Airpressure</a>
+                            <a class="dropdown-item" href="#">Reported Temperature</a>
+                            <a class="dropdown-item" href="#">Reported Humidity</a>
+                            <a class="dropdown-item" href="#">Light</a>
+                            <a class="dropdown-item" href="#">Motion</a>
+                            <a class="dropdown-item" href="#">Noise</a>
+                            <a class="dropdown-item" href="#">Air Pressure</a>
+                            <a class="dropdown-item" href="#">VOC</a>
+                            <a class="dropdown-item" href="#">ECO2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="row top30">
+            <div class="col-md-6">
+                <div class="card h-100" id="card6" style="max-height:275px">
+                    <div class="card-body">
+                        <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/graph-3033203-1280_ver_1.jpg" class="graphImg" id="graph1">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                            </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 1</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 2</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 3</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Outside Temperature</a>
+                            <a class="dropdown-item" href="#">Outside Humidity</a>
+                            <a class="dropdown-item" href="#">Outside Airpressure</a>
+                            <a class="dropdown-item" href="#">Reported Temperature</a>
+                            <a class="dropdown-item" href="#">Reported Humidity</a>
+                            <a class="dropdown-item" href="#">Light</a>
+                            <a class="dropdown-item" href="#">Motion</a>
+                            <a class="dropdown-item" href="#">Noise</a>
+                            <a class="dropdown-item" href="#">Air Pressure</a>
+                            <a class="dropdown-item" href="#">VOC</a>
+                            <a class="dropdown-item" href="#">ECO2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100" id="card7" style="max-height:275px">
+                    <div class="card-body">
+                        <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/graph-3033203-1280_ver_1.jpg" class="graphImg" id="graph1">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                            </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 1</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 2</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 3</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Outside Temperature</a>
+                            <a class="dropdown-item" href="#">Outside Humidity</a>
+                            <a class="dropdown-item" href="#">Outside Airpressure</a>
+                            <a class="dropdown-item" href="#">Reported Temperature</a>
+                            <a class="dropdown-item" href="#">Reported Humidity</a>
+                            <a class="dropdown-item" href="#">Light</a>
+                            <a class="dropdown-item" href="#">Motion</a>
+                            <a class="dropdown-item" href="#">Noise</a>
+                            <a class="dropdown-item" href="#">Air Pressure</a>
+                            <a class="dropdown-item" href="#">VOC</a>
+                            <a class="dropdown-item" href="#">ECO2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100" id="card8" style="max-height:275px">
+                    <div class="card-body">
+                        <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/graph-3033203-1280_ver_1.jpg" class="graphImg" id="graph1">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                            </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 1</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 2</a>
+                            <a class="dropdown-item" onclick="changeGraph()" href="#">Property 3</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select...
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Outside Temperature</a>
+                            <a class="dropdown-item" href="#">Outside Humidity</a>
+                            <a class="dropdown-item" href="#">Outside Airpressure</a>
+                            <a class="dropdown-item" href="#">Reported Temperature</a>
+                            <a class="dropdown-item" href="#">Reported Humidity</a>
+                            <a class="dropdown-item" href="#">Light</a>
+                            <a class="dropdown-item" href="#">Motion</a>
+                            <a class="dropdown-item" href="#">Noise</a>
+                            <a class="dropdown-item" href="#">Air Pressure</a>
+                            <a class="dropdown-item" href="#">VOC</a>
+                            <a class="dropdown-item" href="#">ECO2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+{% endblock %}

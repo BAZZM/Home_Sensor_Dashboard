@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% set active_page = "graphs" %}
+
+{% block app_content %}
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b> Outside Humidity</b></h5>
+  </header>
+
+  <div class="w3-row-padding w3-margin-bottom">
+    <div id="chart" class="chart">
+        
+    
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script>
+            
+            
+            var options = {
+                series: [{
+                data: {{outside_hum|safe}}
+                }],
+                chart: {
+
+                    type: 'area',
+                    stacked: false,
+                    height: 350,
+                    zoom: {
+                            type : 'x',
+                            enabled: true,
+                            autoScaleYaxis: true
+                        },                
+                    toolbar: {
+                        autoSelected: 'zoom'
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                markers: {
+                    size: 0,
+                },
+                title: {
+                    text: 'Outside Humidity vs Time',
+                    align: 'left'
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shadeIntensity: 1,
+                        inverseColors: false,
+                        opacityFrom: 0.5,
+                        opacityTo: 0,
+                        stops: [0,90,100]
+                    },
+                },
+                xaxis: {
+                    
+                    categories: {{data_time|safe}}
+                    
+                },
+                yaxis: {
+                    min: 0,
+                    max: 150,
+                    title: {
+                        text: 'Outside Humidity'
+                    }
+                },
+                };
+
+            var chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+        </script>
+    </div>
+  </div>
+
+  <div class='statistics'>
+    <div class="w3-container">
+    <h5>General Stats</h5>
+    <p>Maximum: {{maximum}}</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-red" style="width:75%">{{maximum}}</div>
+    </div>
+    <p>Minimum: {{minimum}}</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-blue" style="width:25%">{{minimum}}</div>
+    </div><p>Average: {{average}}</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-green" style="width:50%">{{average}}</div>
+    </div>
+  </div>
+    <div class="anomaly-container">
+    <h3>Anomalies</h3>
+    <h3>{{oh_flag_count}} Flags Detected</h3>
+    <p>Click this button see</p>
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Anomalies</button>
+    <div id="demo" class="collapse">
+      {{flags}}
+    </div>
+  </div>
+  <!-- End page content -->
+</div>
+
+{% endblock %}

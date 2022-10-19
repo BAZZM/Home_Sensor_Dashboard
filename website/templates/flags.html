@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% set active_page = "flags" %}
+
+{% block app_content %}
+
+    <div class="content">
+<!-- ROW 1 -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100" id="card3" style="max-height:400px">
+                    <div class="card-body">
+                        <h5 class="card-title">Reported Temperature: {{ flagsrt }} flags </h5>
+                        <p class="card-text">{{ flagsrtlist }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" href="{{url_for('reported_temp')}}" role="button">View Graph</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" id="card4" style="max-height:400px">
+                    <div class="card-body">
+                        <h5 class="card-title">Reported Humidity: {{ flagsrh }} flags </h5>
+                        <p class="card-text">{{ flagsrhlist }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" href="{{url_for('reported_hum')}}" role="button">View Graph</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" id="card5" style="max-height:400px">
+                    <div class="card-body">
+                        <h5 class="card-title">Outside Temperature: {{ flagsot }} flags </h5>
+                        <p class="card-text">{{ flagsotlist }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" href="{{url_for('outside_temp')}}" role="button">View Graph</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row top30">
+            <div class="col-md-4">
+                <div class="card h-100" id="card3" style="max-height:400px">
+                    <div class="card-body">
+                        <h5 class="card-title">Outside Humidity: {{ flagsoh }} flags </h5>
+                        <p class="card-text">{{ flagsohlist }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" href="{{url_for('outside_hum')}}" role="button">View Graph</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" id="card4" style="max-height:400px">
+                    <div class="card-body">
+                        <h5 class="card-title">Air Pressure: {{ flagsap }} flags </h5>
+                        <p class="card-text">{{ flagsaplist }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" href="{{url_for('air')}}" role="button">View Graph</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" id="card5" style="max-height:400px">
+                    <div class="card-body">
+                        <h5 class="card-title">Outside Air Pressure: {{ flagsop }} flags </h5>
+                        <p class="card-text">{{ flagsoplist }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" href="{{url_for('outside_press')}}" role="button">View Graph</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+{% endblock %}

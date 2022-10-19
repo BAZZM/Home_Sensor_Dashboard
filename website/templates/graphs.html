@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% set active_page = "graphs" %}
+
+{% block app_content %}
+
+    <div class="content">
+
+        <div class="col-md-6">
+          <div class="card h-100" style="padding:30px">
+        <h3>Choose the following links to see graphs:</h3>
+        <h4> Multiple Properties?   {{current_user.multi}} </h4>
+        <br>
+        <ul class="list-unstyled components">
+          <li>
+            <a class="btn btn-secondary" href="{{url_for('reported_temp')}}" role="button">Reported Temperature</a>
+          </li>
+          <br>
+          <li>
+            <a class="btn btn-secondary" href="{{url_for('reported_hum')}}" role="button">Reported Humidity</a>
+          </li>
+          <br>
+          <li>
+            <a class="btn btn-secondary" href="{{url_for('air')}}" role="button">Air Pressure</a>
+          </li>
+          <br>
+          <li>
+            <a class="btn btn-secondary" href="{{url_for('outside_temp')}}" role="button">Outside Temperature</a>
+          </li>
+          <br>
+          <li>
+            <a class="btn btn-secondary" href="{{url_for('outside_hum')}}" role="button">Outside Humidity</a>
+          </li>
+          <br>
+          <li>
+            <a class="btn btn-secondary" href="{{url_for('outside_press')}}" role="button">Outside Pressure</a>
+          </li>
+        </ul>
+      
+          </div>
+        </div>
+
+        
+    </div>
+
+
+{% endblock %}

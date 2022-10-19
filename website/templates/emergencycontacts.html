@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% set active_page = "emergencycontacts" %}
+
+{% block app_content %}
+
+<div class="content">
+  <div class="col-md-6">
+    <div class="card h-100" style="padding:30px">
+        <h3>Emergency Contacts:</h3>
+      <table><tr><th>Name</th><th>Phone</th><th>Email</th></tr>
+        <tr>
+        <td>{{ current_user.ecname }}</td>
+        <td>{{ current_user.ecphone }}</td>
+        <td>{{ current_user.ecemail }}</td>
+        </tr>
+      </table>
+      <br>
+      <h4> Public Emergency Numbers </h4>
+      <ul>
+        <li> Non-emergency police - 101 </li>
+        <li> Non-emergency health issues - 111 </li>
+        <li> COVID-19 testing helpline - 119 </li>
+        <li> gas leaks - 0800 111 999 </li>
+      </ul>
+      If you cannot talk: Pressing 55 after dialling 999, will connect you to the police.
+      </div>
+      <div class="container">
+        <h2 style="color:rgb(253, 0, 0);"> <strong>Emergency Call</strong></h2> 
+        <p class="btn btn-info" styles='text-align:center' href="tel:+44-999">Call</p>
+        <br><br>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+ website/__init__.py                     |  31 [32m+[m[31m--[m
+ website/forms.py                        |  53 [32m++[m[31m---[m
+ website/models.py                       |  33 [32m++[m[31m-[m
+ website/routes.py                       |  50 [32m++++[m[31m-[m
+ website/security.py                     |  19 [31m--[m
+ website/templates/flags.html            |   2 [32m+[m[31m-[m
+ website/templates/outside_hum.html      |   6 [32m+[m[31m-[m
+ website/templates/outside_press.html    |   6 [32m+[m[31m-[m
+ website/templates/outside_temp.html     |   7 [32m+[m[31m-[m
+ website/templates/pressure.html         |   6 [32m+[m[31m-[m
+ website/templates/reported_hum.html     |   7 [32m+[m[31m-[m
+ website/templates/reported_temp.html    |   6 [32m+[m[31m-[m
+ website/templates/testing1.html         |  53 [32m++[m[31m---[m
+ website/templatesold/graphsold.html     | 348 [31m--------------------------------[m
+ website/templatesold/outside_hum.html   | 159 [31m---------------[m
+ website/templatesold/outside_press.html | 160 [31m---------------[m
+ website/templatesold/outside_temp.html  | 159 [31m---------------[m
+ website/templatesold/reported_hum.html  | 160 [31m---------------[m
+ website/templatesold/reported_temp.html | 162 [31m---------------[m
+ website/test.py                         |  30 [31m---[m
+ website/user.py                         |   5 [31m-[m
+ 21 files changed, 159 insertions(+), 1303 deletions(-)

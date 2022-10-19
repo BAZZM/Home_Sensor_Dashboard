@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% set active_page = "login" %}
+
+{% block app_content %}
+<div class="content">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2>Log in</h2>
+                <form action="" method="post" novalidate>
+                    {{ form.hidden_tag() }}
+                    <p class="pelem">
+                        {{ form.username.label }}<br>
+                        {{ form.username(size=32) }}<br>
+                        {% for error in form.username.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p class="pelem">
+                        {{ form.password.label }}<br>
+                        {{ form.password(size=32) }}<br>
+                        {% for error in form.password.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p class="pelem">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+                    <p>{{ form.submit() }}</p>
+                </form>
+                <p>Or... <a href="{{ url_for('register') }}">Register</a></p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+    document.getElementById('sidebarelems').style.visibility="hidden";
+</script>
+   
+{% endblock %}

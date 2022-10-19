@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% set active_page = "profile" %}
+
+{% block app_content %}
+<div class="content">
+  <div class="col-md-6">
+    <div class="card h-100" id="card1" style="max-height:900px">
+      <div class="card-body">
+        <h3>Your Profile Details</h3>
+        <br>
+        <h4>Username:</h4>
+        <p>{{ user.username }}</p>
+        <br>
+        <h4>Email:</h4>
+        <p>{{ user.email }}</p>
+        <br>
+        <h4>Phone Number:</h4>
+        <p>{{ user.phone }}</p>
+        <br>
+        <h4>Date of Birth:</h4>
+        <p>{{ user.dob }}</p>
+        <br>
+        <h4>Emergency Contact Details:</h4>
+        <p>{{ user.ecname }} | {{ user.ecphone }} | {{ user.ecemail }}</p>
+        <br>
+        <h4>Multiple Properties:</h4>
+        <p>{{ user.multi }}</p>
+      </div>
+  </div>
+  </div>
+    
+</div>
+
+
+{% endblock %}

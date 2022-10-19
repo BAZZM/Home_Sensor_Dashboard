@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% set active_page = "testing1" %}
+
+{% block app_content %}
+    <div class="content">
+        <div class="col-md-4">
+            <div class="card h-100" style="max-height:800px">
+                <div class="card-body">
+                    <h2>Register</h2>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.username.label }}<br>
+                {{ form.username(size=32) }}<br>
+                {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.email.label }}<br>
+                {{ form.email(size=64) }}<br>
+                {% for error in form.email.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.password.label }}<br>
+                {{ form.password(size=32) }}<br>
+                {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.password2.label }}<br>
+                {{ form.password2(size=32) }}<br>
+                {% for error in form.password2.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.phone.label }}<br>
+                {{ form.phone(size=32) }}<br>
+                {% for error in form.phone.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.dob.label }}<br>
+                {{ form.dob(size=32) }}<br>
+                {% for error in form.dob.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.ecname.label }}<br>
+                {{ form.ecname(size=32) }}<br>
+                {% for error in form.ecname.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.ecphone.label }}<br>
+                {{ form.ecphone(size=32) }}<br>
+                {% for error in form.ecphone.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.ecemail.label }}<br>
+                {{ form.ecemail(size=32) }}<br>
+                {% for error in form.ecemail.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.multi.label }}<br>
+                {{ form.multi(size=32) }}<br>
+                {% for error in form.multi.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.submit() }}
+            </p>
+        </form>
+        <p>Or... <a href="{{ url_for('login') }}">Login</a></p>
+</div>
+</div>
+</div>
+    <script>
+        document.getElementById('sidebarelems').style.visibility="hidden";
+    </script>
+    
+{% endblock %}
+
+
